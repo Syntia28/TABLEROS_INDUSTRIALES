@@ -4,42 +4,42 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ToggleLeft, ToggleRight, Layers, Gauge, Shield, ShieldAlert, ChevronLeft, ChevronRight, X, Maximize2, Download, MessageSquare } from 'lucide-react';
 
 const panelImages = [
-  '20260328_114014.jpg',
-  '20260328_114920.jpg',
-  '20260328_114955.jpg',
-  '20260328_115158.jpg',
-  '20260328_120223.jpg',
-  '20260328_120237.jpg',
-  '20260328_120255.jpg',
-  '20260417_093320.jpg',
-  '20260417_093325.jpg',
-  '20260417_093337.jpg',
-  '20260417_093358.jpg',
-  '20260417_093402.jpg',
-  '20260424_122415.jpg',
-  '20260424_122457.jpg',
-  '20260424_122502.jpg',
-  '20260424_144718.jpg',
-  '20260424_144756.jpg',
-  '20260424_152420.jpg',
-  '20260424_152629.jpg',
-  '20260506_174837.jpg',
-  '20260506_174855.jpg',
-  '20260506_175724.jpg',
-  '20260513_102218.jpg',
-  '20260513_102242.jpg',
-  '20260513_104016.jpg',
-  '20260513_145927.jpg',
-  '20260513_145946.jpg',
-  '20260513_145952.jpg',
-  '20260523_112553.jpg',
-  '20260523_112637.jpg',
-  '20260523_113522.jpg',
-  '20260523_113538.jpg',
-  '20260525_125441.jpg',
-  '20260525_125543.jpg',
-  '20260525_125559.jpg',
-  '20260525_125646.jpg'
+  'tablero-distribucion-fuerza-lima.jpg',
+  'tablero-autosoportado-distribucion-electrica.jpg',
+  'tablero-control-automatizacion-plc.jpg',
+  'tablero-transferencia-automatica-emergencia.jpg',
+  'gabinete-electrico-control-motores-ccm.jpg',
+  'tablero-adosado-distribucion-fuerza.jpg',
+  'sistema-proteccion-electrica-industrial.jpg',
+  'tablero-control-bombas-agua.jpg',
+  'gabinete-metalico-control-procesos.jpg',
+  'tablero-distribucion-secundaria-empotrable.jpg',
+  'celda-media-tension-proteccion.jpg',
+  'tablero-electrico-general-industria.jpg',
+  'tablero-control-ventilacion-forzada.jpg',
+  'gabinete-control-automatizacion-hmi.jpg',
+  'tablero-banco-condensadores-energia.jpg',
+  'tablero-distribucion-trifasico-comercial.jpg',
+  'gabinete-distribucion-energia-segura.jpg',
+  'tablero-monitoreo-parametros-electricos.jpg',
+  'tablero-automatizado-control-procesos.jpg',
+  'tablero-electrico-proteccion-motores.jpg',
+  'gabinete-automatizacion-variadores-frecuencia.jpg',
+  'tablero-distribucion-principal-autosoportado.jpg',
+  'tablero-control-alumbrado-programable.jpg',
+  'gabinete-metalico-distribucion-fuerza.jpg',
+  'tablero-distribucion-trifasica-talleres.jpg',
+  'tablero-autosoportado-control-procesos.jpg',
+  'tablero-control-sistema-presion-constante.jpg',
+  'gabinete-electrico-distribucion-lima.jpg',
+  'tablero-transferencia-grupos-electrogenos.jpg',
+  'tablero-distribucion-fuerza-edificios.jpg',
+  'tablero-proteccion-diferencial-industrial.jpg',
+  'gabinete-distribucion-caja-moldeada.jpg',
+  'tablero-control-extractores-aire.jpg',
+  'tablero-distribucion-subestacion-electrica.jpg',
+  'gabinete-control-scada-automatizacion.jpg',
+  'tablero-electrico-metalico-autosoportado.jpg'
 ];
 
 export function Products() {
@@ -82,7 +82,11 @@ export function Products() {
       title: 'Interruptores Térmicos y de Fuerza',
       category: 'protecciones',
       description: 'Dispositivos de conmutación y protección contra sobrecorrientes y cortocircuitos. Interruptores de caja moldeada (MCCB), caja abierta y riel DIN.',
-      details: 'Soportan corrientes nominales desde 1A hasta 6300A con unidades de disparo magnéticas o electrónicas regulables.'
+      details: (
+        <>
+          Soportan corrientes nominales desde <span className="tech-data">1A</span> hasta <span className="tech-data">6300A</span> con unidades de disparo magnéticas o electrónicas regulables.
+        </>
+      )
     },
     {
       id: 'reles',
@@ -90,7 +94,11 @@ export function Products() {
       title: 'Relés de Sobrecarga y Protección',
       category: 'protecciones',
       description: 'Protección confiable para motores contra calentamientos causados por sobrecargas mecánicas, pérdidas de fase o asimetrías de corriente.',
-      details: 'Relés térmicos bimetálicos y relés electrónicos de alta precisión con clase de disparo seleccionable (Clase 10, 20).'
+      details: (
+        <>
+          Relés térmicos bimetálicos y relés electrónicos de alta precisión con clase de disparo seleccionable (<span className="tech-data">Clase 10, 20</span>).
+        </>
+      )
     },
     {
       id: 'contactores',
@@ -98,7 +106,11 @@ export function Products() {
       title: 'Contactores y Arrancadores',
       category: 'maniobra',
       description: 'Equipos robustos de maniobra electromagnética para el control a distancia de motores eléctricos, circuitos de alumbrado y bancos de condensadores.',
-      details: 'Modelos de alta durabilidad eléctrica de hasta 1,000,000 de ciclos de operación.'
+      details: (
+        <>
+          Modelos de alta durabilidad eléctrica de hasta <span className="tech-data">1,000,000</span> de ciclos de operación.
+        </>
+      )
     },
     {
       id: 'medidores',
@@ -106,7 +118,11 @@ export function Products() {
       title: 'Multímetros y Controladores',
       category: 'control',
       description: 'Analizadores de redes eléctricas, controladores de factor de potencia y componentes de monitoreo de energía en tiempo real.',
-      details: 'Compatibilidad con protocolos Modbus RTU / Ethernet para integración en sistemas SCADA y de automatización.'
+      details: (
+        <>
+          Compatibilidad con protocolos <span className="tech-data">Modbus RTU / Ethernet</span> para integración en sistemas SCADA y de automatización.
+        </>
+      )
     }
   ];
 
@@ -186,7 +202,7 @@ export function Products() {
                     <div className="flex items-start gap-2.5">
                       <Shield className="w-4.5 h-4.5 text-accent-cyan shrink-0 mt-0.5" />
                       <span className="text-xs text-slate-400 leading-relaxed font-mono">
-                        <strong className="text-slate-300">Especificación:</strong> {product.details}
+                        <strong className="text-slate-300 font-sans">Especificación:</strong> {product.details}
                       </span>
                     </div>
                   </div>
@@ -235,7 +251,7 @@ export function Products() {
                 className="group relative cursor-pointer overflow-hidden rounded-2xl border border-cyan-500/10 bg-slate-900/60 p-2 hover:border-cyan-500/30 transition-all duration-300"
                 onClick={() => setSelectedImageIndex(index)}
               >
-                <div className="relative aspect-[3/4] w-full overflow-hidden rounded-xl bg-slate-950">
+                <div className="relative aspect-[3/4] w-full overflow-hidden rounded-xl bg-slate-950 terminal-frame cyan-overlay-container">
                   <img
                     src={`/FOTO DE TABLEROS/${imgName}`}
                     alt={`Tablero Eléctrico Industrial - Proyecto ${imgName.split('.')[0]}`}
@@ -243,7 +259,7 @@ export function Products() {
                     loading="lazy"
                   />
                   {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-slate-950/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <div className="absolute inset-0 bg-slate-950/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
                     <div className="flex flex-col items-center gap-2">
                       <div className="w-10 h-10 rounded-full bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-accent-cyan">
                         <Maximize2 className="w-5 h-5" />
@@ -256,7 +272,9 @@ export function Products() {
                 {/* Image Caption/Label */}
                 <div className="mt-2.5 px-1 pb-1 flex items-center justify-between text-slate-400">
                   <span className="text-[10px] font-mono font-bold text-accent-cyan">PROYECTO</span>
-                  <span className="text-[10px] font-mono">{imgName.split('_')[0] || 'Tablero'}</span>
+                  <span className="text-[10px] font-mono uppercase truncate max-w-[140px] block" title={imgName.replace('.jpg', '').replace(/-/g, ' ')}>
+                    {imgName.replace('.jpg', '').replace(/-/g, ' ')}
+                  </span>
                 </div>
               </motion.div>
             ))}
@@ -276,41 +294,44 @@ export function Products() {
         </div>
 
         {/* Brands Section */}
-        <div className="border-t border-cyan-500/10 pt-16">
+        <div className="border-t border-cyan-500/10 pt-16 overflow-hidden">
           <div className="text-center mb-10">
             <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">
               Socio Estratégico de Marcas Reconocidas
             </span>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-6">
-            {brands.map((brand, idx) => (
-              <motion.div
-                key={brand.name}
-                initial={{ opacity: 0, y: 15 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: idx * 0.05 }}
-                className="glass-panel hover:border-cyan-500/30 p-5 rounded-2xl flex flex-col items-center justify-center text-center group transition-all duration-300 w-[180px] sm:w-[200px]"
-              >
-                {/* Contenedor de logotipo con fondo sutil y dimensiones unificadas */}
-                <div className="h-14 w-full bg-slate-950/40 rounded-xl flex items-center justify-center p-2 mb-3 relative border border-slate-800/30 group-hover:border-cyan-500/20 group-hover:bg-slate-900/40 transition-all duration-300 overflow-hidden">
-                  <img
-                    src={brand.logo}
-                    alt={`Logotipo de ${brand.name}`}
-                    className="max-h-10 max-w-full object-contain filter grayscale opacity-50 brightness-[1.2] group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
-                  />
+          <div className="relative w-full flex items-center overflow-hidden py-4 mask-gradient">
+            {/* Gradient Overlays for Left and Right edges to fade logos out smoothly */}
+            <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-slate-950 to-transparent z-15 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-slate-950 to-transparent z-15 pointer-events-none" />
+
+            {/* Infinite slider train */}
+            <div className="flex gap-6 w-max animate-slide-infinite">
+              {[...brands, ...brands, ...brands].map((brand, idx) => (
+                <div
+                  key={`${brand.name}-${idx}`}
+                  className="glass-panel hover:border-cyan-500/30 p-5 rounded-2xl flex flex-col items-center justify-center text-center group transition-all duration-300 w-[180px] sm:w-[200px] shrink-0"
+                >
+                  {/* Logotype container with hover color effects */}
+                  <div className="h-14 w-full bg-slate-950/40 rounded-xl flex items-center justify-center p-2 mb-3 relative border border-slate-800/30 group-hover:border-cyan-500/20 group-hover:bg-slate-900/40 transition-all duration-300 overflow-hidden">
+                    <img
+                      src={brand.logo}
+                      alt={`Logotipo de ${brand.name}`}
+                      className="max-h-10 max-w-full object-contain filter grayscale opacity-40 brightness-[1.2] group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
+                    />
+                  </div>
+                  
+                  <span className="text-xs font-bold text-slate-300 group-hover:text-accent-cyan transition-colors truncate w-full">
+                    {brand.name}
+                  </span>
+                  
+                  <span className="text-[9px] text-slate-500 font-mono uppercase tracking-wider mt-1 block">
+                    {brand.type} • {brand.origin}
+                  </span>
                 </div>
-                
-                <span className="text-xs font-bold text-slate-300 group-hover:text-accent-cyan transition-colors truncate w-full">
-                  {brand.name}
-                </span>
-                
-                <span className="text-[9px] text-slate-500 font-mono uppercase tracking-wider mt-1 block">
-                  {brand.type} • {brand.origin}
-                </span>
-              </motion.div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
 

@@ -142,3 +142,167 @@ body {
 .animate-slide-infinite:hover {
   animation-play-state: paused;
 }
+
+/* Custom Tech Data Typography (JetBrains Mono Neon) */
+.tech-data {
+  font-family: 'JetBrains Mono', monospace;
+  color: #00ff88; /* Neon Industrial Green */
+  text-shadow: 0 0 8px rgba(0, 255, 136, 0.4);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+/* Industrial Scanner Laser Effect on cards */
+.scanner-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.scanner-card::after {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, var(--accent-cyan), transparent);
+  box-shadow: 0 0 10px var(--accent-cyan), 0 0 20px var(--accent-cyan);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.scanner-card:hover::after {
+  opacity: 1;
+  animation: scan-vertical 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes scan-vertical {
+  0% {
+    top: -10%;
+  }
+  100% {
+    top: 110%;
+  }
+}
+
+/* Project Gallery Terminal Title Bar mock helper */
+.terminal-frame {
+  border-top: 24px solid rgba(15, 23, 42, 0.9);
+  position: relative;
+}
+
+.terminal-frame::before {
+  content: '';
+  position: absolute;
+  top: -16px;
+  left: 12px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ff5f56;
+  box-shadow: 16px 0 0 #ffbd2e, 32px 0 0 #27c93f;
+  z-index: 10;
+}
+
+/* Cyan color overlay for Project gallery images */
+.cyan-overlay-container {
+  position: relative;
+}
+
+.cyan-overlay-container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 240, 255, 0.25);
+  mix-blend-mode: color;
+  transition: opacity 0.4s ease;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.cyan-overlay-container:hover::before {
+  opacity: 0;
+}
+
+/* Global Light Mode High Contrast overrides */
+.light {
+  --background: #f8fafc; /* Slate-50 */
+  --foreground: #0f172a; /* Slate-900 */
+  --accent-cyan: #0891b2; /* Cyan-600 */
+  --accent-blue: #1d4ed8; /* Blue-700 */
+  --panel-bg: rgba(241, 245, 249, 0.85); /* Slate-100 translucent */
+}
+
+.light body {
+  background-color: var(--background) !important;
+  color: var(--foreground) !important;
+}
+
+/* Alternating background colors for sections in Light Mode */
+.light section {
+  background-color: var(--background) !important;
+}
+
+.light section:nth-of-type(even) {
+  background-color: #f1f5f9 !important; /* Slate-100 */
+}
+
+/* Color overrides for high contrast text readability */
+.light h1, .light h2, .light h3, .light h4, .light h5, .light h6,
+.light .text-white, .light .text-slate-100, .light .text-slate-200 {
+  color: #0f172a !important;
+}
+
+.light p, .light span, .light .text-slate-300, .light .text-slate-400 {
+  color: #334155 !important;
+}
+
+.light .text-slate-500 {
+  color: #64748b !important;
+}
+
+.light .glass-panel {
+  background: rgba(255, 255, 255, 0.85) !important;
+  border-color: rgba(8, 145, 178, 0.25) !important;
+  box-shadow: 0 8px 32px 0 rgba(15, 23, 42, 0.08) !important;
+}
+
+.light .glass-panel-hover:hover {
+  border-color: rgba(8, 145, 178, 0.45) !important;
+  box-shadow: 0 0 25px rgba(8, 145, 178, 0.15) !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+}
+
+.light input, .light select, .light textarea {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(8, 145, 178, 0.3) !important;
+  color: #0f172a !important;
+}
+
+.light input::placeholder, .light textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+.light .tech-grid {
+  background-image: 
+    linear-gradient(to right, rgba(8, 145, 178, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(8, 145, 178, 0.05) 1px, transparent 1px) !important;
+}
+
+.light .tech-grid-dots {
+  background-image: radial-gradient(circle, rgba(8, 145, 178, 0.09) 1px, transparent 1px) !important;
+}
+
+/* Readable font tech-data for Light Mode */
+.light .tech-data {
+  color: #047857 !important; /* Slate green */
+  text-shadow: none !important;
+}
+
+/* Ensure navbar backdrop behaves correctly in Light Mode */
+.light header, .light nav {
+  background: rgba(248, 250, 252, 0.8) !important;
+  border-color: rgba(15, 23, 42, 0.08) !important;
+}
+

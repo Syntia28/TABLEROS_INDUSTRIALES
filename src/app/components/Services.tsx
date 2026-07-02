@@ -47,7 +47,7 @@ export function Services() {
   ];
 
   return (
-    <section id="servicios" className="relative py-24 scroll-mt-20">
+    <section id="servicios" className="relative py-24 scroll-mt-20 bg-slate-900/30 border-y border-cyan-500/5">
       <div className="absolute inset-0 tech-grid-dots opacity-30 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -95,7 +95,7 @@ export function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-50px' }}
                 transition={{ duration: 0.5, delay: index * 0.15 }}
-                className="glass-panel glass-panel-hover rounded-3xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 relative group overflow-hidden"
+                className="glass-panel glass-panel-hover scanner-card rounded-3xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 relative group overflow-hidden"
               >
                 {/* Visual glow element on background hover */}
                 <div className="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-full filter blur-xl group-hover:bg-cyan-500/15 transition-all duration-500" />

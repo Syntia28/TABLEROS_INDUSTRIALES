@@ -5,7 +5,9 @@ import { Services } from './components/Services';
 import { Products } from './components/Products';
 import { Advantages } from './components/Advantages';
 import { Clients } from './components/Clients';
+import { Testimonials } from './components/Testimonials';
 import { Contact } from './components/Contact';
+import { B2BQuoteForm } from './components/B2BQuoteForm';
 import { Footer } from './components/Footer';
 
 export default function Home() {
@@ -31,8 +33,14 @@ export default function Home() {
         {/* Client Slider */}
         <Clients />
 
+        {/* Testimonials (Social Proof) */}
+        <Testimonials />
+
         {/* Contact Info & Redirection Form */}
         <Contact />
+
+        {/* B2B Formal Quotation Form */}
+        <B2BQuoteForm />
       </main>
 
       {/* Main Footer */}

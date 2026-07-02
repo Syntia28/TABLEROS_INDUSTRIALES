@@ -32,7 +32,7 @@ export function Advantages() {
   ];
 
   return (
-    <section id="ventajas" className="relative py-24 scroll-mt-20 overflow-hidden">
+    <section id="ventajas" className="relative py-24 scroll-mt-20 overflow-hidden bg-slate-950">
       {/* Glow circles */}
       <div className="absolute right-0 top-1/3 w-80 h-80 bg-blue-600/5 rounded-full filter blur-3xl pointer-events-none" />
       <div className="absolute left-0 bottom-1/4 w-80 h-80 bg-cyan-600/5 rounded-full filter blur-3xl pointer-events-none" />
@@ -54,66 +54,124 @@ export function Advantages() {
                 <div className="flex items-center gap-2">
                   <Activity className="w-4 h-4 text-accent-cyan animate-pulse" />
                   <span className="text-xs font-mono text-slate-300 font-bold uppercase tracking-wider">
-                    MONITOR DE CONTINUIDAD
+                    DASHBOARD DE OPERACIONES
                   </span>
                 </div>
                 <span className="text-[10px] text-green-400 font-mono bg-green-500/10 px-2 py-0.5 rounded border border-green-500/20">
-                  ESTABLE
+                  ONLINE
                 </span>
               </div>
 
-              {/* Central Electric Waveform SVG */}
-              <div className="h-40 w-full flex items-center justify-center relative overflow-hidden bg-slate-950/80 rounded-2xl border border-cyan-500/5 px-2">
-                <svg className="w-full h-full text-glow-cyan" viewBox="0 0 300 150">
-                  <defs>
-                    <linearGradient id="waveGrad" x1="0" y1="0" x2="1" y2="0">
-                      <stop offset="0%" stopColor="#0072f3" />
-                      <stop offset="50%" stopColor="#00f0ff" />
-                      <stop offset="100%" stopColor="#0072f3" />
-                    </linearGradient>
-                  </defs>
-                  {/* Grid lines inside waveform */}
-                  <line x1="0" y1="75" x2="300" y2="75" stroke="rgba(0,240,255,0.08)" strokeDasharray="4" />
-                  <line x1="75" y1="0" x2="75" y2="150" stroke="rgba(0,240,255,0.08)" strokeDasharray="4" />
-                  <line x1="150" y1="0" x2="150" y2="150" stroke="rgba(0,240,255,0.08)" strokeDasharray="4" />
-                  <line x1="225" y1="0" x2="225" y2="150" stroke="rgba(0,240,255,0.08)" strokeDasharray="4" />
-                  
-                  {/* Dynamic Sine wave representing electrical current flow */}
-                  <path 
-                    d="M 0 75 Q 37.5 15, 75 75 T 150 75 T 225 75 T 300 75" 
-                    fill="none" 
-                    stroke="url(#waveGrad)" 
-                    strokeWidth="3.5" 
-                    strokeLinecap="round"
-                    className="animate-[pulse_1.5s_infinite]"
-                  />
-                  
-                  {/* Floating electrical charge dots */}
-                  <circle cx="75" cy="75" r="4.5" fill="#00f0ff" className="animate-[ping_1.5s_infinite]" />
-                  <circle cx="225" cy="75" r="4.5" fill="#00f0ff" className="animate-[ping_1.5s_infinite_delay-700]" />
-                </svg>
+              {/* Circular Gauges Grid */}
+              <div className="grid grid-cols-2 gap-4 mb-6">
+                {/* Gauge 1: Disponibilidad */}
+                <div className="flex flex-col items-center justify-center p-3 bg-slate-950/40 rounded-2xl border border-cyan-500/5">
+                  <div className="relative w-20 h-20 flex items-center justify-center">
+                    <svg className="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+                      <circle
+                        cx="50"
+                        cy="50"
+                        r="40"
+                        stroke="rgba(0, 240, 255, 0.05)"
+                        strokeWidth="6"
+                        fill="transparent"
+                      />
+                      <motion.circle
+                        cx="50"
+                        cy="50"
+                        r="40"
+                        stroke="#00ff88"
+                        strokeWidth="6"
+                        fill="transparent"
+                        strokeDasharray={2 * Math.PI * 40}
+                        initial={{ strokeDashoffset: 2 * Math.PI * 40 }}
+                        whileInView={{ strokeDashoffset: (2 * Math.PI * 40) - (99.9 / 100) * (2 * Math.PI * 40) }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 1.5, ease: "easeOut" }}
+                        strokeLinecap="round"
+                      />
+                    </svg>
+                    <div className="absolute flex flex-col items-center justify-center text-center">
+                      <span className="text-xs font-bold text-slate-200 font-mono tech-data">99.9%</span>
+                    </div>
+                  </div>
+                  <span className="text-[9px] text-slate-500 font-mono uppercase tracking-wider mt-2.5">DISPONIBILIDAD</span>
+                </div>
+
+                {/* Gauge 2: Cumplimiento IEC */}
+                <div className="flex flex-col items-center justify-center p-3 bg-slate-950/40 rounded-2xl border border-cyan-500/5">
+                  <div className="relative w-20 h-20 flex items-center justify-center">
+                    <svg className="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+                      <circle
+                        cx="50"
+                        cy="50"
+                        r="40"
+                        stroke="rgba(0, 240, 255, 0.05)"
+                        strokeWidth="6"
+                        fill="transparent"
+                      />
+                      <motion.circle
+                        cx="50"
+                        cy="50"
+                        r="40"
+                        stroke="#00f0ff"
+                        strokeWidth="6"
+                        fill="transparent"
+                        strokeDasharray={2 * Math.PI * 40}
+                        initial={{ strokeDashoffset: 2 * Math.PI * 40 }}
+                        whileInView={{ strokeDashoffset: (2 * Math.PI * 40) - (100 / 100) * (2 * Math.PI * 40) }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 1.5, ease: "easeOut", delay: 0.2 }}
+                        strokeLinecap="round"
+                      />
+                    </svg>
+                    <div className="absolute flex flex-col items-center justify-center text-center">
+                      <span className="text-xs font-bold text-slate-200 font-mono tech-data">100%</span>
+                    </div>
+                  </div>
+                  <span className="text-[9px] text-slate-500 font-mono uppercase tracking-wider mt-2.5">NORMA IEC</span>
+                </div>
               </div>
 
-              {/* System details */}
-              <div className="grid grid-cols-2 gap-4 mt-6 pt-4 border-t border-cyan-500/10">
-                <div className="flex flex-col gap-1">
-                  <span className="text-[9px] text-slate-500 font-mono uppercase">DISPONIBILIDAD</span>
-                  <span className="text-lg font-bold text-white tracking-tight flex items-center gap-1">
-                    99.9%
-                    <Zap className="w-3.5 h-3.5 text-accent-cyan" />
-                  </span>
+              {/* Progress Bars Stack */}
+              <div className="space-y-4 pt-4 border-t border-cyan-500/10">
+                {/* Progress Bar 1: Seguridad */}
+                <div className="flex flex-col gap-1.5">
+                  <div className="flex justify-between text-[10px] font-mono text-slate-400">
+                    <span>SEGURIDAD NEMA</span>
+                    <span className="tech-data">100%</span>
+                  </div>
+                  <div className="h-2 w-full bg-slate-950/80 rounded-full overflow-hidden border border-cyan-500/5">
+                    <motion.div
+                      className="h-full bg-gradient-to-r from-blue-600 to-cyan-400"
+                      initial={{ width: "0%" }}
+                      whileInView={{ width: "100%" }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 1.2, ease: "easeOut", delay: 0.4 }}
+                    />
+                  </div>
                 </div>
-                <div className="flex flex-col gap-1">
-                  <span className="text-[9px] text-slate-500 font-mono uppercase">CONFIABILIDAD</span>
-                  <span className="text-lg font-bold text-white tracking-tight flex items-center gap-1">
-                    MÁXIMA
-                    <Server className="w-3.5 h-3.5 text-blue-500" />
-                  </span>
+
+                {/* Progress Bar 2: Eficiencia Energética */}
+                <div className="flex flex-col gap-1.5">
+                  <div className="flex justify-between text-[10px] font-mono text-slate-400">
+                    <span>EFICIENCIA ENERGÉTICA</span>
+                    <span className="tech-data">98%</span>
+                  </div>
+                  <div className="h-2 w-full bg-slate-950/80 rounded-full overflow-hidden border border-cyan-500/5">
+                    <motion.div
+                      className="h-full bg-gradient-to-r from-blue-600 to-cyan-400"
+                      initial={{ width: "0%" }}
+                      whileInView={{ width: "98%" }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 1.2, ease: "easeOut", delay: 0.6 }}
+                    />
+                  </div>
                 </div>
               </div>
 
-              <div className="mt-4 text-[10px] text-slate-400 font-mono leading-relaxed bg-slate-900/40 p-3 rounded-xl border border-cyan-500/5">
-                Compromiso de garantizar seguridad, eficiencia y continuidad operativa para nuestros clientes comerciales e industriales.
+              <div className="mt-6 text-[10px] text-slate-400 font-mono leading-relaxed bg-slate-900/40 p-3 rounded-xl border border-cyan-500/5">
+                Datos calculados en base a protocolos de pruebas industriales en planta antes de la entrega de equipos.
               </div>
             </motion.div>
           </div>

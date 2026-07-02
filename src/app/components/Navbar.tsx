@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Phone, MessageSquare } from 'lucide-react';
+import { Menu, X, Phone, MessageSquare, Sun, Moon } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -8,6 +8,7 @@ import { usePathname } from 'next/navigation';
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [theme, setTheme] = useState<'dark' | 'light'>('dark');
   const pathname = usePathname();
 
   useEffect(() => {
@@ -15,8 +16,31 @@ export function Navbar() {
       setScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
+
+    // Initialize theme from localStorage or system preferences
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') {
+      setTheme('light');
+      document.documentElement.classList.add('light');
+    } else {
+      setTheme('dark');
+      document.documentElement.classList.remove('light');
+    }
+
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const toggleTheme = () => {
+    if (theme === 'dark') {
+      setTheme('light');
+      document.documentElement.classList.add('light');
+      localStorage.setItem('theme', 'light');
+    } else {
+      setTheme('dark');
+      document.documentElement.classList.remove('light');
+      localStorage.setItem('theme', 'dark');
+    }
+  };
 
   const navItems = [
     { name: 'Inicio', href: '/' },
@@ -107,14 +131,31 @@ export function Navbar() {
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center">
+          {/* Theme & Mobile Actions */}
+          <div className="flex items-center gap-3">
+            {/* Accessibility Light/Dark Mode Switch */}
             <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-slate-300 hover:text-accent-cyan transition-colors p-1"
+              onClick={toggleTheme}
+              className="w-10 h-10 rounded-xl bg-slate-900/50 border border-cyan-500/10 hover:border-cyan-500/30 flex items-center justify-center text-accent-cyan hover:text-cyan-400 transition-colors cursor-pointer"
+              title="Alternar Modo Claro / Oscuro"
+              aria-label="Alternar Modo Claro / Oscuro"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {theme === 'dark' ? (
+                <Sun className="w-4.5 h-4.5 text-accent-cyan" />
+              ) : (
+                <Moon className="w-4.5 h-4.5 text-accent-cyan" />
+              )}
             </button>
+
+            {/* Mobile Menu Toggle Button */}
+            <div className="md:hidden flex items-center">
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="text-slate-300 hover:text-accent-cyan transition-colors p-1"
+              >
+                {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>
+            </div>
           </div>
         </div>
       </div>
