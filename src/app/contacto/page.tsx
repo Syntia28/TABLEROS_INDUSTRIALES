@@ -2,6 +2,7 @@ import React from 'react';
 import type { Metadata } from 'next';
 import { Navbar } from '../components/Navbar';
 import { Contact } from '../components/Contact';
+import { B2BQuoteForm } from '../components/B2BQuoteForm';
 import { Footer } from '../components/Footer';
 
 export const metadata: Metadata = {
@@ -15,6 +16,7 @@ export default function ContactoPage() {
       <Navbar />
       <main className="flex-1 pt-20">
         <Contact />
+        <B2BQuoteForm />
       </main>
       <Footer />
     </div>

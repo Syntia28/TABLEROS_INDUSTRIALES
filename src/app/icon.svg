@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Clean background circle (replaces the old info/globe icon) -->
+  <circle cx="12" cy="12" r="10" stroke="#00f0ff" stroke-width="1.5" opacity="0.25" />
+  <!-- Outer incomplete circle matching the logo style -->
+  <path d="M11.5 3C6.75 3 3 6.75 3 11.5S6.75 20 11.5 20c3.48 0 6.5-2.07 7.84-5.07" stroke="#00f0ff" stroke-width="1.8" />
+  <!-- Central lightning bolt -->
+  <path d="M12.5 5.5l-5 7h4v6l5-7h-4z" fill="#00f0ff" />
+</svg>

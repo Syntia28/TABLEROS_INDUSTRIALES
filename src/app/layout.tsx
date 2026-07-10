@@ -3,6 +3,8 @@ import "./globals.css";
 import { ThreeBackground } from "./components/ThreeBackground";
 import { FloatingWhatsapp } from "./components/FloatingWhatsapp";
 import { TechCursor } from "./components/TechCursor";
+import { ClientLayout } from "./components/ClientLayout";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "AUTOMATIZACION INDUSTRIAL | Tableros Eléctricos y Protecciones",
@@ -34,11 +36,21 @@ export default function RootLayout({
       </head>
       <body className="min-h-full flex flex-col font-sans bg-slate-950 text-slate-100">
         <ThreeBackground />
-        {children}
+        <ClientLayout>
+          {children}
+        </ClientLayout>
         <FloatingWhatsapp />
         <TechCursor />
+        
+        {/* Widget de Accesibilidad UserWay */}
+        <Script
+          src="https://cdn.userway.org/widget.js"
+          data-account="au1j2fECe0"
+          strategy="lazyOnload"
+        />
       </body>
     </html>
   );
 }
+
 

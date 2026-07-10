@@ -1,6 +1,7 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import { Navbar } from '../components/Navbar';
+import { WhyChooseUs } from '../components/WhyChooseUs';
 import { Services } from '../components/Services';
 import { Footer } from '../components/Footer';
 
@@ -14,6 +15,7 @@ export default function ServiciosPage() {
     <div className="relative min-h-screen flex flex-col overflow-hidden">
       <Navbar />
       <main className="flex-1 pt-20">
+        <WhyChooseUs />
         <Services />
       </main>
       <Footer />

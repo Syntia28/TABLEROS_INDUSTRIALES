@@ -39,7 +39,7 @@ const services = [
   }
 ];
 
-export function Services() {
+export function ServicesPreview() {
   const [activeService, setActiveService] = useState(services[0]);
 
   return (

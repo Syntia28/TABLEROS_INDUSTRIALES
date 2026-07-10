@@ -1,13 +1,13 @@
 import React from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
+import { WhyChooseUs } from './components/WhyChooseUs';
 import { Services } from './components/Services';
-import { Products } from './components/Products';
-import { Advantages } from './components/Advantages';
+import { ProductsPreview } from './components/ProductsPreview';
+import { AdvantagesPreview } from './components/AdvantagesPreview';
 import { Clients } from './components/Clients';
 import { Testimonials } from './components/Testimonials';
-import { Contact } from './components/Contact';
-import { B2BQuoteForm } from './components/B2BQuoteForm';
+import { ContactPreview } from './components/ContactPreview';
 import { Footer } from './components/Footer';
 
 export default function Home() {
@@ -21,26 +21,26 @@ export default function Home() {
         {/* Welcome Hero / Animated Logo */}
         <Hero />
 
+        {/* Why Choose Us Workflow Process */}
+        <WhyChooseUs />
+
         {/* Engineering Services */}
         <Services />
 
-        {/* Components Catalog & Partner Brands */}
-        <Products />
+        {/* Products Brief Preview */}
+        <ProductsPreview />
 
-        {/* Value Proposition & Competitive Advantages */}
-        <Advantages />
+        {/* Advantages Brief Preview */}
+        <AdvantagesPreview />
 
-        {/* Client Slider */}
+        {/* Clients Sliders */}
         <Clients />
 
-        {/* Testimonials (Social Proof) */}
+        {/* Testimonials */}
         <Testimonials />
 
-        {/* Contact Info & Redirection Form */}
-        <Contact />
-
-        {/* B2B Formal Quotation Form */}
-        <B2BQuoteForm />
+        {/* Contact Brief Preview */}
+        <ContactPreview />
       </main>
 
       {/* Main Footer */}

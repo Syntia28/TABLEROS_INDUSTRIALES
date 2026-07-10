@@ -57,11 +57,11 @@ export function Footer() {
             </h4>
             <ul className="space-y-3 text-sm font-medium">
               {[
-                { href: '#inicio', label: 'Inicio' },
-                { href: '#servicios', label: 'Servicios de Ingeniería' },
-                { href: '#productos', label: 'Equipos y Protecciones' },
-                { href: '#ventajas', label: 'Ventajas Competitivas' },
-                { href: '#clientes', label: 'Nuestros Clientes' }
+                { href: '/', label: 'Inicio' },
+                { href: '/servicios', label: 'Servicios de Ingeniería' },
+                { href: '/productos', label: 'Equipos y Protecciones' },
+                { href: '/ventajas', label: 'Ventajas Competitivas' },
+                { href: '/clientes', label: 'Nuestros Clientes' }
               ].map((link) => (
                 <li key={link.href}>
                   <a

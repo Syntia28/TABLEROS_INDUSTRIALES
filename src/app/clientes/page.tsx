@@ -2,6 +2,7 @@ import React from 'react';
 import type { Metadata } from 'next';
 import { Navbar } from '../components/Navbar';
 import { Clients } from '../components/Clients';
+import { Testimonials } from '../components/Testimonials';
 import { Footer } from '../components/Footer';
 
 export const metadata: Metadata = {
@@ -15,6 +16,7 @@ export default function ClientesPage() {
       <Navbar />
       <main className="flex-1 pt-20">
         <Clients />
+        <Testimonials />
       </main>
       <Footer />
     </div>

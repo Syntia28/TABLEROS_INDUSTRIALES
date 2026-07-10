@@ -75,7 +75,7 @@ export function Navbar() {
                 fill="currentColor"
               >
                 {/* Custom circular electric bolt icon similar to the logo */}
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15.5h-2v-6h2v6zm0-8h-2V7h2v2.5z" className="opacity-20" />
+                <path d="M 12 2 A 10 10 0 1 1 12 22 A 10 10 0 1 1 12 2 Z" className="opacity-20" />
                 <path d="M11.5 3C6.75 3 3 6.75 3 11.5S6.75 20 11.5 20c3.48 0 6.5-2.07 7.84-5.07l-1.39-.62A7.447 7.447 0 0 1 11.5 18.5C7.63 18.5 4.5 15.37 4.5 11.5S7.63 4.5 11.5 4.5c2.95 0 5.49 1.83 6.53 4.43l1.39-.62C18 5.07 14.98 3 11.5 3z" />
                 <path d="M12.5 5.5l-5 7h4v6l5-7h-4z" />
               </svg>
