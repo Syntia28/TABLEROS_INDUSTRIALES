@@ -5,8 +5,8 @@ import { Clients } from '../components/Clients';
 import { Footer } from '../components/Footer';
 
 export const metadata: Metadata = {
-  title: "Nuestros Clientes y Aliados | AUTOMATIZACION INDUSTRIAL",
-  description: "Respaldando proyectos de gran envergadura en sectores de alta exigencia: industrial, minero, inmobiliario, comercial, pesca e infraestructura.",
+  title: "Clientes Satisfechos y Casos de Éxito de Tableros Eléctricos",
+  description: "Conoce a nuestros clientes líderes en los sectores industrial, minero y construcción que confían en nuestros tableros industriales y soluciones de automatización.",
 };
 
 export default function ClientesPage() {

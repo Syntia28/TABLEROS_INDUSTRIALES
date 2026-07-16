@@ -6,8 +6,8 @@ import { Services } from '../components/Services';
 import { Footer } from '../components/Footer';
 
 export const metadata: Metadata = {
-  title: "Servicios de Ingeniería Eléctrica | AUTOMATIZACION INDUSTRIAL",
-  description: "Diseño y fabricación personalizada de tableros eléctricos (distribución, fuerza, control de motores) y automatización con PLC/HMI. Planos eléctricos en CAD y mantenimiento.",
+  title: "Fabricación de Tableros Eléctricos y Servicios de Ingeniería",
+  description: "Servicios especializados de diseño y fabricación de tableros industriales, automatización con PLC/HMI, planos eléctricos en CAD y mantenimiento predictivo en Lima, Perú.",
 };
 
 export default function ServiciosPage() {

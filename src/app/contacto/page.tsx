@@ -6,8 +6,8 @@ import { B2BQuoteForm } from '../components/B2BQuoteForm';
 import { Footer } from '../components/Footer';
 
 export const metadata: Metadata = {
-  title: "Contacto y Cotizaciones | AUTOMATIZACION INDUSTRIAL",
-  description: "Solicite una cotización a medida para su tablero eléctrico industrial. Atención técnica en Lima, Perú. Escríbanos por correo, teléfono o WhatsApp.",
+  title: "Cotizar los Mejores Tableros Industriales | Contacto Directo",
+  description: "Solicita una cotización rápida de los mejores tableros industriales y de automatización para tu obra en Lima y a todo el Perú. Asesoría técnica especializada.",
 };
 
 export default function ContactoPage() {

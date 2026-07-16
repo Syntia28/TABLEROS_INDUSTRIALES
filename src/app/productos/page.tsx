@@ -5,8 +5,8 @@ import { Products } from '../components/Products';
 import { Footer } from '../components/Footer';
 
 export const metadata: Metadata = {
-  title: "Catálogo de Equipamiento y Galería de Tableros | AUTOMATIZACION INDUSTRIAL",
-  description: "Equipamiento eléctrico de primera línea (Schneider, Siemens, ABB) y Galería de tableros eléctricos fabricados a medida para la industria peruana.",
+  title: "Los Mejores Tableros Industriales y Equipamiento | Catálogo y Galería",
+  description: "Descubre los mejores tableros industriales fabricados a medida (distribución, fuerza y automatización) y equipamiento original de marcas líderes en Lima, Perú.",
 };
 
 export default function ProductosPage() {

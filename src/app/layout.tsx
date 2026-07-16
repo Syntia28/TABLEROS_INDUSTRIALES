@@ -7,15 +7,20 @@ import { ClientLayout } from "./components/ClientLayout";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "AUTOMATIZACION INDUSTRIAL | Tableros Eléctricos y Protecciones",
-  description: "Diseño, fabricación y comercialización de tableros eléctricos a medida (distribución, control y automatización) y venta de interruptores técnicos en Lima, Perú.",
-  keywords: "tableros electricos, automatizacion industrial, interruptores termicos, reles de sobrecarga, ingenieria electrica, lima peru, cercado de lima, schneider electric, siemens, abb",
-  authors: [{ name: "Tableros Industriales S.A.C." }],
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://tablerosindustriales.pe'),
+  title: {
+    default: "Los Mejores Tableros Industriales y Automatización | A.I. Tableros Industriales S.A.C.",
+    template: "%s | A.I. Tableros Industriales S.A.C."
+  },
+  description: "Diseño, fabricación e instalación de los mejores tableros industriales de distribución, control y fuerza. Certificación IEC, componentes de marcas líderes y soporte especializado en Lima, Perú.",
+  keywords: "mejores tableros industriales, tableros electricos industriales, fabricacion de tableros electricos, diseño de tableros electricos, armado de tableros electricos, instalacion de tableros electricos, mantenimiento de tableros electricos, tableros de distribucion, tableros de fuerza, tableros de control, tableros de automatizacion, tableros de arranque de motores, tableros de bombeo, presion constante, transferencias automaticas, ccm, centro de control de motores, bancos de condensadores, filtros de armonicos, tableros autosoportados, automatizacion industrial, programacion de plc, integracion hmi, sistemas scada, variadores de frecuencia, arrancadores suaves, interruptores termomagneticos, interruptores de caja moldeada, mccb, interruptores abiertos, acb, contactores, reles de sobrecarga, guardamotores, llaves termicas, celdas de media tension, supresores de transitorios, dps, schneider electric, siemens, abb, ls electric, chint electric, hager, mennekes, steck, indeco, ingenieria electrica peru, tableros electricos lima, cercado de lima, contratistas electricos peru, eplan",
+  authors: [{ name: "A.I. Tableros Industriales S.A.C." }],
   openGraph: {
-    title: "AUTOMATIZACION INDUSTRIAL | Soluciones Eléctricas",
-    description: "Montaje, cableado y mantenimiento de tableros eléctricos industriales y de automatización.",
+    title: "Los Mejores Tableros Industriales y Automatización | A.I. Tableros Industriales S.A.C.",
+    description: "Diseño, fabricación y mantenimiento de tableros eléctricos industriales y de automatización con certificación IEC en Perú.",
     type: "website",
     locale: "es_PE",
+    url: "https://tablerosindustriales.pe",
   }
 };
 
@@ -42,6 +47,55 @@ export default function RootLayout({
         <FloatingWhatsapp />
         <TechCursor />
         
+        {/* Marcado de Datos Estructurados JSON-LD */}
+        <Script
+          id="structured-data"
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "name": "A.I. Tableros Industriales S.A.C.",
+              "alternateName": "Automatización Industrial",
+              "image": "https://tablerosindustriales.pe/icon.svg",
+              "url": "https://tablerosindustriales.pe",
+              "telephone": "+51973380801",
+              "priceRange": "$$",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "JR. PACHITEA 290",
+                "addressLocality": "Cercado de Lima",
+                "addressRegion": "Lima",
+                "postalCode": "15001",
+                "addressCountry": "PE"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": -12.052674,
+                "longitude": -77.034509
+              },
+              "openingHoursSpecification": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday"
+                ],
+                "opens": "08:00",
+                "closes": "18:00"
+              },
+              "sameAs": [
+                "https://wa.me/51979798186"
+              ],
+              "description": "Fabricación y diseño de los mejores tableros industriales de distribución, control y automatización para el sector industrial y comercial peruano."
+            })
+          }}
+        />
+
         {/* Widget de Accesibilidad UserWay */}
         <Script
           src="https://cdn.userway.org/widget.js"

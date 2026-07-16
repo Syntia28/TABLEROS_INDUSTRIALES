@@ -30,6 +30,7 @@ export function Hero() {
             </motion.div>
 
             <h1 className="text-6xl lg:text-[5.2rem] font-black tracking-[-4px] leading-none">
+              <span className="sr-only">A.I. Tableros Industriales S.A.C. | Fabricantes de los Mejores Tableros Industriales y Automatización Eléctrica en Lima, Perú</span>
               <motion.span
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}

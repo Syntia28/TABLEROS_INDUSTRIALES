@@ -5,8 +5,8 @@ import { Advantages } from '../components/Advantages';
 import { Footer } from '../components/Footer';
 
 export const metadata: Metadata = {
-  title: "Nuestras Ventajas Competitivas | AUTOMATIZACION INDUSTRIAL",
-  description: "Descubra nuestra propuesta de valor: calidad certificada, componentes premium de marcas líderes mundiales, soluciones multidisciplinarias y soporte técnico postventa.",
+  title: "Tableros Eléctricos con Calidad Certificada | Nuestras Ventajas",
+  description: "Descubre nuestras ventajas competitivas: los mejores tableros industriales con componentes originales de marcas líderes, ingeniería certificada y soporte técnico postventa.",
 };
 
 export default function VentajasPage() {
