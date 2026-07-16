@@ -2,7 +2,7 @@ import React from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { WhyChooseUs } from './components/WhyChooseUs';
-import { Services } from './components/Services';
+import { ServicesPreview } from './components/ServicesPreview';
 import { ProductsPreview } from './components/ProductsPreview';
 import { AdvantagesPreview } from './components/AdvantagesPreview';
 import { Clients } from './components/Clients';
@@ -24,8 +24,8 @@ export default function Home() {
         {/* Why Choose Us Workflow Process */}
         <WhyChooseUs />
 
-        {/* Engineering Services */}
-        <Services />
+        {/* Engineering Services Preview */}
+        <ServicesPreview />
 
         {/* Products Brief Preview */}
         <ProductsPreview />

@@ -12,7 +12,7 @@ const services = [
     title: "Tableros Eléctricos",
     subtitle: "Fabricación a Medida",
     desc: "Tableros de distribución, control y automatización con ingeniería certificada y acabado profesional.",
-    image: "/FOTO DE TABLEROS/tablero-control-automatizacion-plc.jpg",
+    image: "/FOTO DE TABLEROS/tablero-1.png",
     icon: Cpu,
     color: "cyan",
     benefit: "Diseño único • Cumplimiento IEC"
@@ -22,7 +22,7 @@ const services = [
     title: "Protecciones y Componentes",
     subtitle: "Marcas Premium",
     desc: "Interruptores, contactores, relés y variadores de las mejores marcas mundiales con stock local.",
-    image: "/FOTO DE TABLEROS/gabinete-control-automatizacion-hmi.jpg",
+    image: "/FOTO DE TABLEROS/tablero-3.png",
     icon: Shield,
     color: "emerald",
     benefit: "Entrega rápida • Garantía oficial"
@@ -32,7 +32,7 @@ const services = [
     title: "Ingeniería y Mantenimiento",
     subtitle: "Soporte Técnico 24/7",
     desc: "Instalación, commissioning, mantenimiento predictivo y solución de fallas en planta.",
-    image: "/FOTO DE TABLEROS/gabinete-automatizacion-variadores-frecuencia.jpg",
+    image: "/FOTO DE TABLEROS/tablero-5.png",
     icon: Zap,
     color: "violet",
     benefit: "Mínimo tiempo de parada"

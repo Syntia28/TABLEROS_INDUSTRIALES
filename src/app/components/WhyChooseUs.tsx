@@ -5,11 +5,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Cpu, ShieldCheck, Zap, CircuitBoard, ArrowRight, Play } from 'lucide-react';
 
 const slideImages = [
-  '/FOTO DE TABLEROS/tablero-control-automatizacion-plc.jpg',
-  '/FOTO DE TABLEROS/gabinete-control-automatizacion-hmi.jpg',
-  '/FOTO DE TABLEROS/gabinete-automatizacion-variadores-frecuencia.jpg',
-  '/FOTO DE TABLEROS/tablero-monitoreo-parametros-electricos.jpg',
-  '/FOTO DE TABLEROS/gabinete-electrico-distribucion-lima.jpg'
+  '/FOTO DE TABLEROS/tablero-1.png',
+  '/FOTO DE TABLEROS/tablero-2.png',
+  '/FOTO DE TABLEROS/tablero-3.png',
+  '/FOTO DE TABLEROS/tablero-4.png',
+  '/FOTO DE TABLEROS/tablero-5.png'
 ];
 
 const steps = [

@@ -1,46 +1,13 @@
 'use client';
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ToggleLeft, ToggleRight, Layers, Gauge, Shield, ShieldAlert, ChevronLeft, ChevronRight, X, Maximize2, Download, MessageSquare } from 'lucide-react';
+import { 
+  ToggleLeft, ToggleRight, Layers, Gauge, Shield, ShieldAlert, 
+  ChevronLeft, ChevronRight, X, Maximize2, Download, MessageSquare,
+  Cpu, Zap, Settings, Droplet, Activity, Split
+} from 'lucide-react';
 
-const panelImages = [
-  'tablero-distribucion-fuerza-lima.jpg',
-  'tablero-autosoportado-distribucion-electrica.jpg',
-  'tablero-control-automatizacion-plc.jpg',
-  'tablero-transferencia-automatica-emergencia.jpg',
-  'gabinete-electrico-control-motores-ccm.jpg',
-  'tablero-adosado-distribucion-fuerza.jpg',
-  'sistema-proteccion-electrica-industrial.jpg',
-  'tablero-control-bombas-agua.jpg',
-  'gabinete-metalico-control-procesos.jpg',
-  'tablero-distribucion-secundaria-empotrable.jpg',
-  'celda-media-tension-proteccion.jpg',
-  'tablero-electrico-general-industria.jpg',
-  'tablero-control-ventilacion-forzada.jpg',
-  'gabinete-control-automatizacion-hmi.jpg',
-  'tablero-banco-condensadores-energia.jpg',
-  'tablero-distribucion-trifasico-comercial.jpg',
-  'gabinete-distribucion-energia-segura.jpg',
-  'tablero-monitoreo-parametros-electricos.jpg',
-  'tablero-automatizado-control-procesos.jpg',
-  'tablero-electrico-proteccion-motores.jpg',
-  'gabinete-automatizacion-variadores-frecuencia.jpg',
-  'tablero-distribucion-principal-autosoportado.jpg',
-  'tablero-control-alumbrado-programable.jpg',
-  'gabinete-metalico-distribucion-fuerza.jpg',
-  'tablero-distribucion-trifasica-talleres.jpg',
-  'tablero-autosoportado-control-procesos.jpg',
-  'tablero-control-sistema-presion-constante.jpg',
-  'gabinete-electrico-distribucion-lima.jpg',
-  'tablero-transferencia-grupos-electrogenos.jpg',
-  'tablero-distribucion-fuerza-edificios.jpg',
-  'tablero-proteccion-diferencial-industrial.jpg',
-  'gabinete-distribucion-caja-moldeada.jpg',
-  'tablero-control-extractores-aire.jpg',
-  'tablero-distribucion-subestacion-electrica.jpg',
-  'gabinete-control-scada-automatizacion.jpg',
-  'tablero-electrico-metalico-autosoportado.jpg'
-];
+const panelImages = Array.from({ length: 38 }, (_, i) => `tablero-${i + 1}.png`);
 
 export function Products() {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -77,50 +44,80 @@ export function Products() {
 
   const productCategories = [
     {
-      id: 'termicos',
-      icon: ToggleRight,
-      title: 'Interruptores Térmicos y de Fuerza',
-      category: 'protecciones',
-      description: 'Dispositivos de conmutación y protección contra sobrecorrientes y cortocircuitos. Interruptores de caja moldeada (MCCB), caja abierta y riel DIN.',
+      id: 'distribucion',
+      icon: Activity,
+      title: 'Tableros de distribución eléctrica',
+      category: 'potencia',
+      image: '/FOTO DE TABLEROS/tablero-1.png',
+      description: 'Diseñados para recibir, proteger y distribuir la energía eléctrica hacia diferentes circuitos o áreas de una instalación. Son fundamentales para asegurar una correcta alimentación eléctrica y una operación segura.',
       details: (
         <>
-          Soportan corrientes nominales desde <span className="tech-data">1A</span> hasta <span className="tech-data">6300A</span> con unidades de disparo magnéticas o electrónicas regulables.
+          Barras de cobre electrolítico de alta pureza (<span className="tech-data">99.9%</span>), interruptores de caja moldeada (MCCB), protección <span className="tech-data">IP40 / IP54</span>.
         </>
       )
     },
     {
-      id: 'reles',
-      icon: ShieldAlert,
-      title: 'Relés de Sobrecarga y Protección',
-      category: 'protecciones',
-      description: 'Protección confiable para motores contra calentamientos causados por sobrecargas mecánicas, pérdidas de fase o asimetrías de corriente.',
+      id: 'fuerza',
+      icon: Zap,
+      title: 'Tableros de fuerza y potencia',
+      category: 'potencia',
+      image: '/FOTO DE TABLEROS/tablero-2.png',
+      description: 'Fabricados para el control y maniobra de cargas eléctricas de mayor demanda, como motores, bombas, compresores y maquinaria industrial. Permiten una operación confiable y ordenada de los sistemas de potencia.',
       details: (
         <>
-          Relés térmicos bimetálicos y relés electrónicos de alta precisión con clase de disparo seleccionable (<span className="tech-data">Clase 10, 20</span>).
+          Maniobra de cargas de alta demanda, arrancadores robustos y peinado estructurado de conductores de alta sección con certificación <span className="tech-data">IEC 61439</span>.
         </>
       )
     },
     {
-      id: 'contactores',
-      icon: Layers,
-      title: 'Contactores y Arrancadores',
-      category: 'maniobra',
-      description: 'Equipos robustos de maniobra electromagnética para el control a distancia de motores eléctricos, circuitos de alumbrado y bancos de condensadores.',
-      details: (
-        <>
-          Modelos de alta durabilidad eléctrica de hasta <span className="tech-data">1,000,000</span> de ciclos de operación.
-        </>
-      )
-    },
-    {
-      id: 'medidores',
-      icon: Gauge,
-      title: 'Multímetros y Controladores',
+      id: 'control',
+      icon: Settings,
+      title: 'Tableros de control',
       category: 'control',
-      description: 'Analizadores de redes eléctricas, controladores de factor de potencia y componentes de monitoreo de energía en tiempo real.',
+      image: '/FOTO DE TABLEROS/tablero-3.png',
+      description: 'Orientados a la supervisión, automatización y control de procesos industriales. Integran dispositivos como relés, contactores, temporizadores, PLC, variadores y otros componentes de control para optimizar el funcionamiento de equipos y procesos.',
       details: (
         <>
-          Compatibilidad con protocolos <span className="tech-data">Modbus RTU / Ethernet</span> para integración en sistemas SCADA y de automatización.
+          Integración multimarca original de gama alta, relés de maniobra rápida, bornes numerados y esquemas en <span className="tech-data">EPLAN</span>.
+        </>
+      )
+    },
+    {
+      id: 'automatizacion',
+      icon: Cpu,
+      title: 'Tableros de automatización',
+      category: 'automatizacion',
+      image: '/FOTO DE TABLEROS/tablero-4.png',
+      description: 'Desarrollados para sistemas que requieren programación, monitoreo y operación inteligente. Estos tableros permiten mejorar la productividad, reducir errores operativos y facilitar la integración con tecnologías modernas.',
+      details: (
+        <>
+          Controladores lógicos programables (PLC), interfaces táctiles <span className="tech-data">HMI</span>, switches industriales y conectividad <span className="tech-data">Modbus / Profinet</span>.
+        </>
+      )
+    },
+    {
+      id: 'arranque',
+      icon: Split,
+      title: 'Tableros de arranque de motores',
+      category: 'potencia',
+      image: '/FOTO DE TABLEROS/tablero-5.png',
+      description: 'Incluyen soluciones para arranque directo, estrella-triángulo, arranque suave y variadores de frecuencia, según las necesidades de cada aplicación. Ayudan a proteger los motores y mejorar su desempeño.',
+      details: (
+        <>
+          Rampas de aceleración/desaceleración calibradas, variadores de frecuencia con filtros de armónicos, protección contra sobrecarga activa.
+        </>
+      )
+    },
+    {
+      id: 'bombeo',
+      icon: Droplet,
+      title: 'Tableros para bombeo y sistemas especiales',
+      category: 'especiales',
+      image: '/FOTO DE TABLEROS/tablero-6.png',
+      description: 'Diseñados para controlar electrobombas, sistemas de presión constante, cisternas, pozos, plantas de tratamiento y otras aplicaciones especiales, adaptándose a los requerimientos técnicos del cliente.',
+      details: (
+        <>
+          Control multipresion mediante transmisores de presión analógicos de <span className="tech-data">4-20mA</span>, alternancia y control PID integrado.
         </>
       )
     }
@@ -137,22 +134,20 @@ export function Products() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
-        <div className="flex flex-col lg:flex-row items-center lg:items-end justify-between gap-6 mb-16">
-          <div className="text-center lg:text-left max-w-2xl">
-            <span className="text-xs uppercase tracking-widest text-accent-cyan font-bold block mb-3">
-              Catálogo Industrial
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-              Equipamiento y Protecciones de Primera Línea
-            </h2>
-            <p className="text-slate-400 mt-4">
-              Suministramos componentes certificados que garantizan la continuidad y seguridad de sus operaciones eléctricas.
-            </p>
-          </div>
+        <div className="flex flex-col items-center text-center max-w-4xl mx-auto mb-16 gap-6">
+          <span className="text-xs uppercase tracking-widest text-accent-cyan font-bold block">
+            Catálogo de Soluciones
+          </span>
+          <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+            Nuestros Tableros Eléctricos Industriales
+          </h2>
+          <p className="text-slate-300 text-sm sm:text-base leading-relaxed max-w-3xl glass-panel p-6 rounded-2xl border border-cyan-500/10 shadow-[0_0_30px_rgba(0,240,255,0.03)] mt-2">
+            En <strong className="text-accent-cyan font-extrabold">A.I. Tableros Industriales S.A.C.</strong> ofrecemos soluciones integrales en diseño, fabricación, ensamblaje e implementación de tableros eléctricos industriales, desarrollados para garantizar seguridad, eficiencia, control y continuidad operativa en distintos procesos y sectores productivos.
+          </p>
           
           {/* Tabs Filter */}
-          <div className="flex gap-2 bg-slate-900/80 p-1.5 rounded-2xl border border-cyan-500/10">
-            {['all', 'protecciones', 'maniobra', 'control'].map((cat) => (
+          <div className="flex flex-wrap justify-center gap-2 bg-slate-900/80 p-1.5 rounded-2xl border border-cyan-500/10 mt-6">
+            {['all', 'potencia', 'control', 'automatizacion', 'especiales'].map((cat) => (
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
@@ -162,14 +157,22 @@ export function Products() {
                     : 'text-slate-400 hover:text-slate-200'
                 }`}
               >
-                {cat === 'all' ? 'Ver Todos' : cat}
+                {cat === 'all' 
+                  ? 'Ver Todos' 
+                  : cat === 'potencia' 
+                    ? 'Potencia y Fuerza' 
+                    : cat === 'control' 
+                      ? 'Control'
+                      : cat === 'automatizacion'
+                        ? 'Automatización'
+                        : 'Sistemas Especiales'}
               </button>
             ))}
           </div>
         </div>
 
         {/* Product Cards Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
           <AnimatePresence mode="popLayout">
             {filteredCategories.map((product, idx) => {
               const Icon = product.icon;
@@ -181,49 +184,64 @@ export function Products() {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.95 }}
                   transition={{ duration: 0.4 }}
-                  className="glass-panel glass-panel-hover rounded-3xl p-6 sm:p-8 flex flex-col gap-5 border border-cyan-500/10 relative group"
+                  className="glass-panel glass-panel-hover rounded-3xl p-6 flex flex-col justify-between border border-cyan-500/10 relative group overflow-hidden"
                 >
                   <div className="absolute top-0 right-0 w-32 h-32 bg-blue-600/5 rounded-full filter blur-2xl group-hover:bg-blue-600/10 transition-all duration-500" />
                   
-                  <div className="flex items-center gap-4">
-                    <div className="flex items-center justify-center w-12 h-12 rounded-2xl bg-blue-600/10 border border-blue-500/25 group-hover:border-cyan-400 transition-colors">
-                      <Icon className="w-6 h-6 text-accent-cyan" />
+                  <div>
+                    {/* Visual Card Image */}
+                    <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl bg-slate-950/40 border border-cyan-500/5 mb-5 group-hover:border-cyan-500/20 transition-all duration-300">
+                      <img
+                        src={product.image}
+                        alt={product.title}
+                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
                     </div>
-                    <h3 className="text-lg sm:text-xl font-bold text-slate-100 group-hover:text-accent-cyan transition-colors">
-                      {product.title}
-                    </h3>
+
+                    <div className="flex items-center gap-3.5 mb-4">
+                      <div className="flex items-center justify-center w-11 h-11 rounded-xl bg-blue-600/10 border border-blue-500/25 group-hover:border-cyan-400 transition-colors shrink-0">
+                        <Icon className="w-5.5 h-5.5 text-accent-cyan" />
+                      </div>
+                      <h3 className="text-base sm:text-lg font-bold text-slate-100 group-hover:text-accent-cyan transition-colors leading-tight">
+                        {product.title}
+                      </h3>
+                    </div>
+
+                    <p className="text-slate-300 text-sm leading-relaxed mb-4">
+                      {product.description}
+                    </p>
                   </div>
 
-                  <p className="text-slate-300 text-sm leading-relaxed">
-                    {product.description}
-                  </p>
-
-                  <div className="bg-slate-950/60 rounded-2xl p-4 border border-cyan-500/5">
-                    <div className="flex items-start gap-2.5">
-                      <Shield className="w-4.5 h-4.5 text-accent-cyan shrink-0 mt-0.5" />
-                      <span className="text-xs text-slate-400 leading-relaxed font-mono">
-                        <strong className="text-slate-300 font-sans">Especificación:</strong> {product.details}
-                      </span>
+                  <div>
+                    <div className="bg-slate-950/60 rounded-2xl p-4 border border-cyan-500/5 mb-4">
+                      <div className="flex items-start gap-2.5">
+                        <Shield className="w-4 h-4 text-accent-cyan shrink-0 mt-0.5" />
+                        <span className="text-xs text-slate-400 leading-relaxed font-mono">
+                          <strong className="text-slate-300 font-sans">Especificación:</strong> {product.details}
+                        </span>
+                      </div>
                     </div>
-                  </div>
 
-                  <div className="flex items-center justify-between mt-2 pt-4 border-t border-cyan-500/5">
-                    <span className="text-slate-500 text-xs font-mono uppercase">Categoría: {product.category}</span>
-                    <a
-                      href={`https://wa.me/51979798186?text=Hola,%20deseo%20cotizar%20productos%20de%20la%20categoría%20${encodeURIComponent(product.title)}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-xs font-extrabold text-accent-cyan hover:text-cyan-300 flex items-center gap-1 group/btn"
-                    >
-                      Cotizar Componente
-                      <span className="group-hover/btn:translate-x-1 transition-transform">→</span>
-                    </a>
+                    <div className="flex items-center justify-between pt-4 border-t border-cyan-500/5">
+                      <span className="text-slate-500 text-[10px] font-mono uppercase">Cat: {product.category}</span>
+                      <a
+                        href={`https://wa.me/51979798186?text=Hola,%20deseo%20cotizar%20un%20${encodeURIComponent(product.title)}%20con%20A.I.%20Tableros%20Industriales`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs font-extrabold text-accent-cyan hover:text-cyan-300 flex items-center gap-1 group/btn"
+                      >
+                        Cotizar Tablero
+                        <span className="group-hover/btn:translate-x-1 transition-transform">→</span>
+                      </a>
+                    </div>
                   </div>
                 </motion.div>
               );
             })}
           </AnimatePresence>
         </div>
+
 
         {/* Proyectos: Galería de Tableros Fabricados */}
         <div className="border-t border-cyan-500/10 pt-16 mb-20">

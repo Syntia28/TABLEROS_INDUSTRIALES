@@ -1,7 +1,8 @@
 'use client';
 
 import React from 'react';
-import { ShieldCheck, Cpu, Headphones, ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { ShieldCheck, Cpu, Headphones, ArrowRight, Sparkles } from 'lucide-react';
 import Link from 'next/link';
 
 export function AdvantagesPreview() {
@@ -9,69 +10,93 @@ export function AdvantagesPreview() {
     {
       icon: ShieldCheck,
       title: 'Calidad Certificada y Normativa',
-      description: 'Cumplimos estrictamente con los estándares y normativas eléctricas vigentes (IEC, NEMA, CNE) garantizando seguridad total.'
+      description: 'Cumplimos estrictamente con los estándares IEC, NEMA y CNE, garantizando seguridad total y cumplimiento normativo.'
     },
     {
       icon: Cpu,
       title: 'Componentes de Fabricantes Líderes',
-      description: 'Integraciones exclusivas con componentes de marcas globales (Schneider, Siemens, ABB) que aseguran durabilidad y repuestos.'
+      description: 'Integraciones exclusivas con marcas globales como Schneider, Siemens y ABB para máxima durabilidad y disponibilidad de repuestos.'
     },
     {
       icon: Headphones,
       title: 'Soporte Técnico y Postventa',
-      description: 'Acompañamos a nuestros clientes desde el diseño conceptual en CAD hasta la puesta en marcha definitiva e in situ.'
+      description: 'Acompañamiento completo desde el diseño conceptual hasta la puesta en marcha y mantenimiento continuo.'
     }
   ];
 
   return (
-    <section className="relative py-24 bg-slate-900/10 border-y border-cyan-500/5 overflow-hidden">
-      <div className="absolute inset-0 tech-grid-dots opacity-20 pointer-events-none" />
+    <section className="relative py-24 bg-transparent overflow-hidden">
+      {/* Fondo sutil premium */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-950/10 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-        
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs uppercase tracking-widest text-cyan-400 font-bold block mb-3">
-            Nuestra Garantía
-          </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-            ¿Por qué Elegir Nuestra Ingeniería?
+
+        {/* Header Espectacular */}
+        <div className="text-center max-w-3xl mx-auto mb-20">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            className="inline-flex items-center gap-3 px-6 py-2.5 rounded-3xl bg-white/5 border border-white/10 text-sm font-semibold text-cyan-400 mb-6"
+          >
+            <Sparkles className="w-4 h-4" />
+            NUESTRA GARANTÍA
+          </motion.div>
+
+          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-white mb-6">
+            ¿Por qué elegirnos?
           </h2>
-          <p className="text-slate-400 mt-4">
-            Nos enfocamos en entregar tableros con altos estándares de seguridad, orden interno impecable y soporte continuo.
+          <p className="text-slate-400 text-lg max-w-2xl mx-auto">
+            Calidad certificada, componentes premium y soporte técnico continuo. Tu proyecto en las mejores manos.
           </p>
         </div>
 
-        {/* Advantages Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        {/* Grid de Ventajas */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {advantages.map((adv, idx) => {
             const Icon = adv.icon;
             return (
-              <div 
+              <motion.div
                 key={idx}
-                className="glass-panel rounded-2xl p-8 border border-cyan-500/10 hover:border-cyan-500/30 transition-all duration-300 shadow-md"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: idx * 0.1 }}
+                whileHover={{ y: -12, scale: 1.03 }}
+                className="group relative bg-white/5 border border-white/10 rounded-3xl p-10 hover:border-cyan-400/50 transition-all duration-500 backdrop-blur-xl"
               >
-                <div className="w-12 h-12 rounded-2xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 mb-6 border border-cyan-500/20 shadow-[0_0_15px_rgba(6,182,212,0.15)]">
-                  <Icon className="w-6 h-6" />
+                {/* Glow en Hover */}
+                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 rounded-3xl transition-all" />
+
+                <div className="w-16 h-16 rounded-2xl bg-cyan-500/10 flex items-center justify-center mb-8 border border-cyan-500/20 group-hover:border-cyan-400/40 transition-colors">
+                  <Icon className="w-8 h-8 text-cyan-400" />
                 </div>
-                <h3 className="text-lg font-bold text-slate-100 mb-3">{adv.title}</h3>
-                <p className="text-slate-400 text-sm leading-relaxed">{adv.description}</p>
-              </div>
+
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors">
+                  {adv.title}
+                </h3>
+
+                <p className="text-slate-400 leading-relaxed text-[15px]">
+                  {adv.description}
+                </p>
+
+                <div className="mt-10 flex items-center text-cyan-400 text-sm font-medium group-hover:text-cyan-300 transition-colors">
+                  Más información
+                  <ArrowRight className="ml-2 w-4 h-4 transition group-hover:translate-x-1" />
+                </div>
+              </motion.div>
             );
           })}
         </div>
 
-        {/* Call to Action */}
-        <div className="flex justify-center">
+        {/* CTA Final */}
+        <div className="flex justify-center mt-16">
           <Link
             href="/ventajas"
-            className="flex items-center gap-2 px-6 py-3 rounded-xl border border-cyan-500/20 hover:border-cyan-500 text-sm font-semibold text-white transition-all bg-slate-900/60"
+            className="flex items-center gap-3 px-10 py-5 rounded-3xl bg-gradient-to-r from-cyan-500 to-sky-600 text-white font-bold text-lg shadow-xl hover:scale-105 transition-all"
           >
-            Ver Dashboard de Operaciones y Ventajas
-            <ArrowRight className="w-4 h-4 text-cyan-400" />
+            Conocer Todas Nuestras Ventajas
+            <ArrowRight className="w-5 h-5" />
           </Link>
         </div>
-
       </div>
     </section>
   );
