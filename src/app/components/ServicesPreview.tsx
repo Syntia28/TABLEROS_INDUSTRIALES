@@ -86,7 +86,7 @@ export function ServicesPreview() {
           <div className="order-1 lg:order-1">
             <div className="mb-12">
               <span className="text-cyan-400 text-sm font-bold tracking-[3px]">EXPLORA NUESTROS SERVICIOS</span>
-              <h2 className="text-5xl font-bold text-white mt-3 leading-tight">
+              <h2 className="text-3xl sm:text-5xl font-bold text-white mt-3 leading-tight">
                 ¿Qué necesita tu proyecto?
               </h2>
             </div>

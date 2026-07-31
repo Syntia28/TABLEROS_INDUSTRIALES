@@ -74,7 +74,7 @@ export function WhyChooseUs() {
           <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-gradient-to-r from-cyan-500/10 to-violet-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium tracking-[3px]">
             TECNOLOGÍA 2027
           </div>
-          <h2 className="mt-6 text-5xl md:text-6xl font-bold bg-gradient-to-br from-white via-cyan-100 to-slate-300 bg-clip-text text-transparent tracking-tighter">
+          <h2 className="mt-6 text-3xl sm:text-5xl md:text-6xl font-bold bg-gradient-to-br from-white via-cyan-100 to-slate-300 bg-clip-text text-transparent tracking-tighter py-1">
             El Futuro de la Energía<br />Se Construye Aquí
           </h2>
           <p className="mt-4 text-xl text-slate-400 max-w-2xl mx-auto">

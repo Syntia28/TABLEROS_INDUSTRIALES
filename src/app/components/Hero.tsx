@@ -29,26 +29,27 @@ export function Hero() {
               INGENIERÍA DEL FUTURO
             </motion.div>
 
-            <h1 className="text-6xl lg:text-[5.2rem] font-black tracking-[-4px] leading-none">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-[5.2rem] font-black tracking-tight sm:tracking-[-3px] lg:tracking-[-4px] leading-tight sm:leading-none">
               <span className="sr-only">A.I. Tableros Industriales S.A.C. | Fabricantes de los Mejores Tableros Industriales y Automatización Eléctrica en Lima, Perú</span>
               <motion.span
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                className="block text-cyan-300"
+                className="block text-cyan-300 pb-1"
               >
                 AUTOMATIZACIÓN
               </motion.span>
-              <span className="bg-gradient-to-r from-white via-cyan-200 to-sky-300 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-white via-cyan-200 to-sky-300 bg-clip-text text-transparent inline-block pb-1">
                 QUE ENCIENDE
               </span>
-              <br />LA INDUSTRIA
+              <br />
+              <span className="inline-block pb-1">LA INDUSTRIA</span>
             </h1>
 
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="text-xl text-slate-300 max-w-xl mx-auto lg:mx-0"
+              className="text-base sm:text-xl text-slate-300 max-w-xl mx-auto lg:mx-0"
             >
               Tableros eléctricos inteligentes. Soluciones de control y automatización que impulsan la productividad industrial del Perú.
             </motion.p>
@@ -75,18 +76,18 @@ export function Hero() {
             </div>
 
             {/* Stats Creativos */}
-            <div className="grid grid-cols-3 gap-8 pt-12 border-t border-white/10">
+            <div className="grid grid-cols-3 gap-3 sm:gap-8 pt-12 border-t border-white/10">
               <div>
-                <div className="text-4xl font-bold text-cyan-300">400V</div>
-                <div className="text-xs text-slate-400 mt-1">SISTEMAS INDUSTRIALES</div>
+                <div className="text-2xl sm:text-4xl font-bold text-cyan-300">400V</div>
+                <div className="text-[10px] sm:text-xs text-slate-400 mt-1">SISTEMAS INDUSTRIALES</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-cyan-300">IEC</div>
-                <div className="text-xs text-slate-400 mt-1">CERTIFICACIÓN GLOBAL</div>
+                <div className="text-2xl sm:text-4xl font-bold text-cyan-300">IEC</div>
+                <div className="text-[10px] sm:text-xs text-slate-400 mt-1">CERTIFICACIÓN GLOBAL</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-cyan-300">24/7</div>
-                <div className="text-xs text-slate-400 mt-1">SOPORTE TÉCNICO</div>
+                <div className="text-2xl sm:text-4xl font-bold text-cyan-300">24/7</div>
+                <div className="text-[10px] sm:text-xs text-slate-400 mt-1">SOPORTE TÉCNICO</div>
               </div>
             </div>
           </div>
