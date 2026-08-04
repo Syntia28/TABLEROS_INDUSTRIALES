@@ -1,6 +1,7 @@
 import React from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
+import { VideoShowcase } from './components/VideoShowcase';
 import { WhyChooseUs } from './components/WhyChooseUs';
 import { ServicesPreview } from './components/ServicesPreview';
 import { ProductsPreview } from './components/ProductsPreview';
@@ -20,6 +21,9 @@ export default function Home() {
       <main className="flex-1">
         {/* Welcome Hero / Animated Logo */}
         <Hero />
+
+        {/* Demostración en Video HD de Acabados & Técnica Especializada */}
+        <VideoShowcase />
 
         {/* Why Choose Us Workflow Process */}
         <WhyChooseUs />

@@ -143,29 +143,69 @@ export function Footer() {
 
         </div>
 
-        {/* Separador de sección inferior */}
-        <div className="relative my-8">
-          <hr className="border-slate-900" />
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 px-4 bg-slate-950">
+        {/* Separador de Sección Inferior con Botón de Retorno al Inicio */}
+        <div className="relative my-10">
+          <div className="absolute inset-0 flex items-center" aria-hidden="true">
+            <div className="w-full border-t border-cyan-500/15" />
+          </div>
+          <div className="relative flex justify-center">
             <button
               onClick={scrollToTop}
-              className="p-1.5 rounded-full bg-slate-900 border border-slate-800 hover:border-cyan-500/50 text-slate-400 hover:text-cyan-400 transition-all duration-300 group shadow-md"
-              aria-label="Volver al inicio"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900 border border-cyan-500/30 text-xs font-bold text-cyan-300 hover:text-white hover:bg-cyan-500/20 hover:border-cyan-400 transition-all duration-300 shadow-[0_0_15px_rgba(34,211,238,0.15)] cursor-pointer group"
+              aria-label="Volver al inicio de la página"
             >
-              <ChevronUp className="w-4 h-4 transform group-hover:-translate-y-0.5 transition-transform" />
+              <span>Subir al Inicio</span>
+              <ChevronUp className="w-4 h-4 text-cyan-400 group-hover:-translate-y-1 transition-transform" />
             </button>
           </div>
         </div>
 
-        {/* Créditos y Legal */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-medium text-slate-500">
-          <p className="order-2 md:order-1 text-center md:text-left">
-            © {currentYear} <span className="text-slate-400">AUTOMATIZACIÓN INDUSTRIAL</span>. Todos los derechos reservados.
-          </p>
-          <div className="flex flex-wrap justify-center items-center gap-x-4 gap-y-2 order-1 md:order-2 text-slate-400">
-            <span className="font-mono bg-slate-900 px-2 py-1 rounded border border-slate-800 text-[11px]">RUC: 20606132901</span>
-            <span className="hidden sm:inline text-slate-700">•</span>
-            <span className="text-slate-500 text-center">Diseñado bajo estándares de ingeniería de alta precisión</span>
+        {/* Barra Épica de Derechos Reservados & Información Legal */}
+        <div className="rounded-3xl p-6 sm:p-8 bg-gradient-to-r from-slate-900/90 via-slate-950/95 to-slate-900/90 border border-cyan-500/25 shadow-[0_0_40px_rgba(6,182,212,0.1)] backdrop-blur-md">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
+            
+            {/* Información Legal Principal */}
+            <div className="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
+              <div className="flex items-center justify-center w-11 h-11 rounded-2xl bg-cyan-500/10 border border-cyan-400/30 text-cyan-400 shadow-[0_0_20px_rgba(34,211,238,0.2)] shrink-0">
+                <Shield className="w-5 h-5" />
+              </div>
+
+              <div>
+                <p className="text-sm font-bold text-slate-200 tracking-wide">
+                  © {currentYear} <span className="bg-gradient-to-r from-cyan-300 to-sky-400 bg-clip-text text-transparent">A.I. TABLEROS INDUSTRIALES S.A.C.</span>
+                </p>
+                <p className="text-xs text-slate-400 mt-0.5">
+                  Todos los derechos reservados. Prohibida la reproducción total o parcial sin autorización.
+                </p>
+              </div>
+            </div>
+
+            {/* Badges Corporativos & RUC */}
+            <div className="flex flex-wrap items-center justify-center gap-3">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-slate-900 border border-cyan-500/30 text-xs font-mono font-bold text-cyan-300 shadow-inner">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                RUC: 20606132901
+              </div>
+
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-slate-900/80 border border-slate-800 text-xs font-medium text-slate-300">
+                <Award className="w-3.5 h-3.5 text-cyan-400" />
+                <span>Norma IEC 61439</span>
+              </div>
+
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-slate-900/80 border border-slate-800 text-xs font-medium text-slate-300">
+                <span className="text-cyan-400 font-black text-xs">Perú</span>
+                <span>Lima, Perú</span>
+              </div>
+            </div>
+
+          </div>
+
+          {/* Subraya Técnica Inferior */}
+          <div className="mt-6 pt-4 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] font-medium text-slate-500 text-center sm:text-left">
+            <span>Fabricantes Autorizados de los Mejores Tableros Industriales y Sistemas de Automatización</span>
+            <span className="text-slate-400 font-semibold flex items-center gap-1.5">
+              Diseñado e Integrado bajo Estándares de Ingeniería de Alta Precisión
+            </span>
           </div>
         </div>
 
