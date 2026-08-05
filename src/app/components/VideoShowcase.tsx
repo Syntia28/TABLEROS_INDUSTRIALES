@@ -98,6 +98,7 @@ export function VideoShowcase() {
                 loop
                 muted={isMuted}
                 playsInline
+                suppressHydrationWarning
                 className="w-full aspect-video object-cover"
                 onPlay={() => setIsPlaying(true)}
                 onPause={() => setIsPlaying(false)}

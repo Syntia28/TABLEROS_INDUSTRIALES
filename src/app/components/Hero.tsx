@@ -15,15 +15,16 @@ export function Hero() {
           muted
           playsInline
           preload="auto"
-          className="w-full h-full object-cover opacity-35 scale-105 filter contrast-125 saturate-150"
+          suppressHydrationWarning
+          className="w-full h-full object-cover opacity-65 scale-105 filter contrast-110 saturate-125 transition-opacity duration-700"
         >
-          <source src="/VIDEO/VIDEO.mp4" type="video/mp4" />
+          <source src="/VIDEO/videofondo.mp4" type="video/mp4" />
         </video>
-        {/* Degradados oscuros y filtros para legibilidad 100% de textos */}
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/85 via-slate-950/75 to-slate-950" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-cyan-900/35 via-slate-950/70 to-slate-950" />
-        <div className="absolute inset-0 tech-grid opacity-30" />
-        <div className="absolute inset-0 bg-[radial-gradient(#22d3ee_0.8px,transparent_1px)] [background-size:40px_40px] opacity-15" />
+        {/* Degradados oscuros sutiles para asegurar alta visibilidad del video y contraste perfecto del texto */}
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/60 via-slate-950/40 to-slate-950/85" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-cyan-900/25 via-slate-950/35 to-slate-950/80" />
+        <div className="absolute inset-0 tech-grid opacity-20" />
+        <div className="absolute inset-0 bg-[radial-gradient(#22d3ee_0.8px,transparent_1px)] [background-size:40px_40px] opacity-10" />
       </div>
 
       {/* Orbes de Energía Dinámicos */}
