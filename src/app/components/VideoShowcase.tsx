@@ -103,7 +103,7 @@ export function VideoShowcase() {
                 onPlay={() => setIsPlaying(true)}
                 onPause={() => setIsPlaying(false)}
               >
-                <source src="/VIDEO/VIDEO.mp4" type="video/mp4" />
+                <source src="/VIDEO/videofondo.mp4" type="video/mp4" />
                 Tu navegador no soporta reproducción de videos HTML5.
               </video>
 
